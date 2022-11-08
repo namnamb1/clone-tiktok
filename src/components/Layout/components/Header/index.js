@@ -25,6 +25,7 @@ import { Wrapper as PopperWrapper } from "~/components/Popper";
 import AccountItem from "~/components/AccountItem";
 import Button from "~/components/Button";
 import Menu from "~/components/Popper/Menu";
+import Image from "~/components/Image";
 
 const cx = classNames.bind(styles);
 const MENU_ITEM = [
@@ -146,10 +147,11 @@ function Header() {
           )}
           <Menu items={currentUser ? userMenu :MENU_ITEM} onChange={handleMenuChange}>
             {currentUser ? (
-              <img
+              <Image
                 className={cx("user-avatar")}
                 src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/3e8b5a21fbde60046e2ed074ba24cd39~c5_100x100.jpeg?x-expires=1667980800&x-signature=V%2BR%2Fm2S6GMqlF363n3oGZsB7u%2Bg%3D"
                 alt=""
+                fallback="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/58bd66d62a096246c188245cc9b9d00a~c5_100x100.jpeg?x-expires=1668049200&x-signature=ZqzV9SDJMjvmVubaGNRdV1%2BgW%2B4%3D"
               />
             ) : (
               <button className={cx("more-btn")}>
