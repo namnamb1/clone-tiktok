@@ -24,6 +24,8 @@ import Menu from "~/components/Popper/Menu";
 import Image from "~/components/Image";
 import Search from "../Search";
 import { InboxIcon, MessageIcon, SearchIcon, UploadIcon } from '~/components/Icons';
+import { Link } from "react-router-dom";
+import config from "~/config";
 
 const cx = classNames.bind(styles);
 const MENU_ITEM = [
@@ -40,7 +42,79 @@ const MENU_ITEM = [
         },
         {
           code: "vi",
-          title: "Tieng viet",
+          title: "Tiếng việt",
+        },
+        {
+          type: "language",
+          code: "en",
+          title: "English",
+        },
+        {
+          code: "vi",
+          title: "Tiếng việt",
+        },
+        {
+          type: "language",
+          code: "en",
+          title: "English",
+        },
+        {
+          code: "vi",
+          title: "Tiếng việt",
+        },
+        {
+          type: "language",
+          code: "en",
+          title: "English",
+        },
+        {
+          code: "vi",
+          title: "Tiếng việt",
+        },
+        {
+          type: "language",
+          code: "en",
+          title: "English",
+        },
+        {
+          code: "vi",
+          title: "Tiếng việt",
+        },
+        {
+          type: "language",
+          code: "en",
+          title: "English",
+        },
+        {
+          code: "vi",
+          title: "Tiếng việt",
+        },
+        {
+          type: "language",
+          code: "en",
+          title: "English",
+        },
+        {
+          code: "vi",
+          title: "Tiếng việt",
+        },
+        {
+          type: "language",
+          code: "en",
+          title: "English",
+        },
+        {
+          code: "vi",
+          title: "Tiếng việt",
+        },
+        {
+          type: "language",
+          code: "en",
+          title: "English",
+        },
+        {
+          code: "vi",
+          title: "Tiếng việt",
         },
       ],
     },
@@ -94,9 +168,10 @@ function Header() {
   return (
     <header className={cx("wrapper")}>
       <div className={cx("inner")}>
-        <img src={images.logo} alt="tiktok" />
+        <Link to={config.routes.home} className={cx("logo-link")}>
+          <img src={images.logo} alt="tiktok" />
+        </Link>
         <Search />
-
         <div className={cx("action")}>
           {currentUser ? (
             <>
